@@ -1,0 +1,280 @@
+/* IMPORTAR FUENTES */
+@font-face{
+    font-family: "fajala";        /*PARA DARLE UN NOMBRE A LA FUENTE*/
+    src: url(../fonts/fuente.ttf)  format('truetype');   /*DATE CUENTA LA EXTENSION ES TTF=TRUE TYPE FORMAT*/
+    font-weight: normal;
+    font-style: normal;
+    
+}/* ahora tengo disponible una fuente*/
+
+/*GENERAL: LA FUENTE POR DEFECTO, LOS MARGENES*/
+/*"*"(asterisco): significa "selecciona todos los elementos de la pagina web  */
+
+
+.clearfix{  /*limpiar los flotados cada vez que utilice esta clase*/
+    clear: both;  
+    float: none;
+}/*esto de aqui es como un salto de linea, se puede poner un div vacio solo con esta clase desde HTML*/
+
+
+*{
+    margin: 0px;          /*borra todos los margenes*/
+    padding: 0px;
+    font-family: sans-serif,Helvetica,Arial;
+    text-decoration: none;    /*no me subraye los enlaces, por ejemplo*/
+}
+
+
+body{
+  /*  font-family:"fajala"; /*SI PONES UNA FUENTE EN EL BLOQUE DE BODY, ENTONCES TODO LO QUE ESTE DENTRO DEL BODY TENDRÁ ESTA FUENTE */
+    background: url(../img/cubes.png) #F4F4F4;   /*EL CODIGO #F4F4F4 ME SIRVE EN CASO DE QUE LA IMAGEN TUVIERA TRANSPARENCIA, SE VERIA ESE COLOR*/
+}
+
+/*ESTILOS DE LA CABECERA*/
+#cabecera{         /*se utliza #id PARA SELECCIONAR EL ELEMENTO CON ESE ID*/
+    width: 85%;    /*si quisiera hacerlo responsive aqui cambia*/
+    height: auto;  
+    background: transparent;
+    margin: 0px auto;   /*el auto me sirve para centrar*/
+    /*border: 2px solid black;*/
+}
+
+/*logotipo*/
+#logo{
+    float: left; 
+    width: 540px;
+    height: 100px;
+        
+}
+ 
+#logo a{
+    font-family: "fajala",Helvetica;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #2979CD;
+    text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+    transition: all 500ms;
+    line-height: 90px;
+    margin-left: 10px;
+
+    /*text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
+    /*text-shadow: horizontal - vertical - blur*/
+    /*para añadir multiples shadows solo separarlas con comas*/
+}
+
+#logo a:hover{
+    cursor:pointer;
+    text-shadow: 0px 0px 0px black, -1px -1px 0px black, -2px -2px 0px black;   
+}
+
+/*MENU*/
+#menu{
+    clear: both;
+    width: 100%; /*es decir: ocupa el 100 del contenedor en donde se encuentre, en este caso es cabecera*/    
+    height: 45px;
+    background: linear-gradient(to bottom,#f9f9f9 0px, #e9e9e9 100%);
+    border: 1px solid #C9C9C9;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px #ccc;
+    overflow: hidden;   /*para que se esconda todo lo que se salga del contenedor */
+}
+
+#menu ul{
+     list-style: none; /*para que no aparezcan los puntos de la lista*/
+}
+
+#menu ul li{
+    float: left;   /*los elementos se van a flotar uno a lado del otro*/
+    line-height: 42px; 
+    border-right: 1px solid #D6D6D6;
+}
+
+#menu ul li a:hover{
+    background: linear-gradient(to bottom,#f2f2f2 0px, #dad9d4  100%);
+}
+
+ /*li es el espacio que ocupa en la pagina web, mientras que a se refiere especificamente a las letras(enlace)*/
+#menu ul li a{
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    color: #666565;
+}
+
+
+/*CONTENDIO*/
+#contenedor{
+    width: 85%;
+    height: auto;
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*BARRAA LATERAL*/
+#sidebar{
+    float: right;
+    width: 27%;
+    height: auto;
+}
+
+/*principal */
+#principal{
+    float:left;
+    width: 66%;
+    min-height: 680px; 
+    background: white;
+    box-shadow: 0px 0px 5px #ccc;  
+    margin-left: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#principal h1{   /*a todos los h1 que haya en principal*/
+    font-size: 32px;
+    color: #444;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #ccc;
+    font-family: "fajala";
+}
+
+#principal h2{
+    font-size: 20px;
+    color: #2979CD ;
+    text-shadow: 1px 1px 2px #ccc;
+    letter-spacing: 1px;
+    font-family: "fajala";
+    margin-top: 25px;
+}
+
+#principal p{
+    margin-top: 8px; 
+}
+
+#principal a{
+     color: #333;
+}
+
+#ver-todas a{
+    display:block;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+    width: 160px;
+    margin: 0px auto;    
+    margin-top: 30px;
+}
+
+/*CAJA LATERAL*/
+.block-aside{
+    display:block;
+    width: 90%;
+    margin: 0px auto;   /*recuerda que toma 20px de TODOS LOS BORDES*/
+    background: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.3),0px 3px 7px rgba(0,0,0,0.3),0px 0px 1px #FFFFFF inset, 0px -3px 2px rgba(0,0,0,0.25) inset;
+}
+
+.block-aside h3{
+     margin-bottom: 15px;
+}
+
+
+/*se pueden seleccionar varios bloques a la vez*/
+lablel,
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    display: block;    /*que lo pueda mover al antojo*/
+    width: 95%;   /*la cajita del input va a medir 95% del bloque*/
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    margin-bottom: 10px;
+    padding: 5px
+}
+
+
+
+input[type="button"],
+input[type="submit"],
+.boton{
+    margin-top: 5px;
+    margin-bottom: 5px;   
+    display:block;
+    border-radius: 2px;
+    color: white;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.boton{
+    color: white !important;
+    width: 150px;
+    text-align: center;
+}
+
+.boton-naranja{
+    background: orange;
+    border-color: orange;
+}
+
+.boton-verde{
+    background: #47cc47; 
+    border-color: #47cc47;
+}
+
+.boton-rojo{
+    background: #ff1212; 
+    border-color: #db2727;
+}
+
+/*pie de pagina*/
+#footer{
+    width: 85%;
+    clear:both;
+    margin: 0px auto;
+    background: linear-gradient(to bottom,#f9f9f9 0px, #e9e9e9 100%);
+    border: 1px solid #c9c9c9;
+    border-bottom: none; /*para que el borde solo se vea por arriba*/
+    border-radius: 8px 8px 0px 0px; 
+    /*arriba-izq, arriba-der, abajo-izq, abajo-derecha*/
+    height: auto;
+    color: #666;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+    
+}
+
+/*alerta de cuando ingresas un usuario */
+.alerta{ /*CTRL+5: REFRESCA LOS ESTILOS*/
+   padding: 5px;
+   font-size: 15px;
+   color: white;
+   background: green; 
+   box-shadow: 0px 1px 3px #ccc;
+   margin-bottom: 15px;
+   border-radius: 2px;
+}
+
+.alerta-error{ /*RECUERDA QUE YA TRAE PROPIEDADES EN ALERTA*/
+    background: red;
+}
+
+.fecha{
+    color: #616c72;
+    margin-top: 5px;
+    font-size: 14px;
+}
